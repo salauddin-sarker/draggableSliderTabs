@@ -1,0 +1,93 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+body{
+    align-items: center;
+    background-color: #5372f0;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 0 10px;
+}
+.wrapper{
+    background-color: #fff;
+    border-radius: 13px;
+    max-width: 1000px;
+    overflow-x: hidden;
+    padding: 35px;
+    position: relative;
+}
+.wrapper .icon{
+    align-items: center;
+    display: flex;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 120px;
+}
+.icon:first-child{
+    background: linear-gradient(90deg, #fff 70%, transparent);
+    display: none;
+    left: 0;
+}
+.icon:last-child{
+    background: linear-gradient(-90deg, #fff 70%, transparent);
+    justify-content: flex-end;
+    right: 0;
+}
+.icon i{
+    background-color: #d8d5f2;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 22px;
+    height: 55px;
+    line-height: 55px;
+    text-align: center;
+    width: 55px;
+}
+.icon i:hover{
+    background-color: #efedfb;
+}
+.icon:first-child i{
+    margin-left: 15px;
+}
+.icon:last-child i{
+    margin-right: 15px;
+}
+.wrapper .tab_box{
+    display: flex;
+    gap: 12px;
+    font-size: 20px;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+.tab_box.dragging{
+    scroll-behavior: auto;
+    cursor: grab;
+}
+.tab_box .tab{
+    background-color: #f5f4fd;
+    border: 1px solid #d8d5f2;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 13px 20px;
+    white-space: nowrap;
+}
+.tab_box.dragging .tab{
+    pointer-events: none;
+    user-select: none;
+}
+.tab_box .tab.active{
+    background-color: #5372f0;
+    border-color: transparent;
+    color: #fff;
+}
